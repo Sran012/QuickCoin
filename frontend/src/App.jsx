@@ -9,7 +9,7 @@ import { PaymentStatus } from "./pages/PaymentStatus.jsx";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL} >
         <Routes>
           <Route path="/" element={<Signup />} />
           <Route path="/signup" element={<Signup />} />
