@@ -23,7 +23,7 @@ export const Dashboard = () => {
 
     // Fetch balance only if token exists
     axios
-      .get("http://172.28.224.30:4756/v1/account/balance", {
+      .get(import.meta.env.VITE_SERVER_URL + "/v1/account/balance", {
         headers: {
           Authorization: "Bearer " + userToken,
         },

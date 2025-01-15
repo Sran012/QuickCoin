@@ -9,7 +9,7 @@ export const Users = ()=> {
     const [filter, setFilter] = useState("");
     
     useEffect(()=> {
-        axios.get("http://172.28.224.30:4756/v1/user/bulk?filter=" + filter).then((response) => {
+        axios.get(import.meta.env.VITE_SERVER_URL + "/v1/user/bulk?filter=" + filter).then((response) => {
             setUsers(response.data.user);
         })
     },[filter]);

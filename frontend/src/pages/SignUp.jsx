@@ -62,7 +62,7 @@ export const Signup = () => {
             <Button
               onClick={async () => {
                 const response = await axios.post(
-                    "http://172.28.224.30:4756/v1/user/signup",
+                    import.meta.env.VITE_SERVER_URL + "/v1/user/signup",
                   {
                     username,
                     firstName,

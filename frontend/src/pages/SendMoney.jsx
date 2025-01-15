@@ -52,7 +52,7 @@ export const SendMoney = () => {
               </div>
               <button
                 onClick={async () => {
-                  const res = await axios.post("http://172.28.224.30:4756/v1/account/transfer",
+                  const res = await axios.post(import.meta.env.VITE_SERVER_URL + "/v1/account/transfer",
                     {
                       to: id,
                       amount,

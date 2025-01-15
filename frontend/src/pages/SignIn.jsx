@@ -29,7 +29,7 @@ export const Signin = () => {
   const handleSignin = async () => {
     setLoading(true); // Start loading when user clicks "Sign in"
     try {
-      const response = await axios.post("http://172.28.224.30:4756/v1/user/signin", {
+      const response = await axios.post(import.meta.env.VITE_SERVER_URL + "/v1/user/signin", {
         username,
         password,
       });
